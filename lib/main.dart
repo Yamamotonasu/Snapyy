@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_ml_kit/google_ml_kit.dart';
+import 'dart:io';
 
 void main() {
   runApp(MyApp());
@@ -27,12 +29,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  String _targetText = 'あかんで';
+  final _languageIdentifier = GoogleMlKit.nlp.languageIdentifier(confidenceThreshold: 0.34);
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  Future<void> _identifyLanguage() async {
+    if (Platform.isAndroid) {
+      final language = await _languageIdentifier.identifyLanguage(_targetText);
+
+      setState(() {
+        _targetText = language;
+      });
+    } else if (Platform.isIOS) {
+      setState(() {
+        _targetText = 'not support for ios';
+      });
+    }
   }
 
   @override
@@ -49,17 +60,23 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              _targetText,
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _identifyLanguage,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _languageIdentifier.close();
   }
 }
