@@ -25,11 +25,13 @@ dependencies:
   google_ml_kit: ^0.6.0
   flutter_localizations:
     sdk: flutter
+  flutter_launcher_icons: ^0.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   lints: ^1.0.1
+
 flutter:
   uses-material-design: true
 
@@ -37,6 +39,15 @@ flutter:
   assets:
     - lib/assets/locale/localization_ja.json
     - lib/assets/locale/localization_en.json
+
+flutter_icons:
+  android: true 
+  ios: true
+  image_path_ios: "lib/assets/app_icons/snappy_icon_1024.png"
+  image_path_android: "lib/assets/app_icons/snappy_icon_512.png"
+  adaptive_icon_foreground: "lib/assets/app_icons/snappy_icon_512.png"
+  adaptive_icon_background: "lib/assets/app_icons/snappy_icon_512.png"
+  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
