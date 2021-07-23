@@ -23,7 +23,7 @@ workflows:
           include: true
     scripts:
       - name: set up debug keystore
-        scripts: |
+        script: |
           # set up debug keystore
           rm -f ~/.android/debug.keystore
           keytool -genkeypair \
@@ -36,19 +36,19 @@ workflows:
             -keysize 2048 \
             -validity 10000
       - name: Set up local.properties
-        scripts: |
+        script: |
           echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - name: Get flutter packages
-        scripts: |
+        script: |
           flutter packages pub get
       - name: Analyze project
-        scripts: |
+        script: |
           cd . && flutter analyze
       - name: Flutter unit test
-        scripts: |
+        script: |
           flutter test
       - name: Android build
-        scripts: |
+        script: |
           flutter build appbundle --debug
       # - name: iOS install deps
       #   scripts: |
