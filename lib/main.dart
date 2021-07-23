@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:snappy/themes/theme.dart';
 
 
 import 'package:snappy/utils/localization.dart';
@@ -34,9 +35,8 @@ class MyApp extends StatelessWidget {
           }
         }
       },
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: Themes.lightThemeData,
+      darkTheme: Themes.darkThemeData,
       home: SelectHowTo(),
     );
   }
@@ -50,12 +50,12 @@ class SelectHowTo extends HookWidget {
     final provider = useProvider(selectHowToViewModelProvider);
     print(provider);
     return Container(
-      color: Color(0xFFD8F2DE),
+      color: Theme.of(context).colorScheme.background,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(provider.isLoading.toString()),
+            Text('私の名前は宇宙人だ！', style: Theme.of(context).primaryTextTheme.button),
             ElevatedButton(
               child: const Text('Button'),
               style: ElevatedButton.styleFrom(

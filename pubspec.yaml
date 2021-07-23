@@ -28,6 +28,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_launcher_icons: ^0.9.0
+  google_fonts: any
 
 
 dev_dependencies:
