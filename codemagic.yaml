@@ -22,27 +22,40 @@ workflows:
         - pattern: 'build'
           include: true
     scripts:
-      - |
-        # set up debug keystore
-        rm -f ~/.android/debug.keystore
-        keytool -genkeypair \
-          -alias androiddebugkey \
-          -keypass android \
-          -keystore ~/.android/debug.keystore \
-          -storepass android \
-          -dname 'CN=Android Debug,O=Android,C=US' \
-          -keyalg 'RSA' \
-          -keysize 2048 \
-          -validity 10000
-      - |
-        # set up local properties
-        echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
-      - flutter packages pub get
-      - flutter analyze
-      - flutter test
-      - flutter build appbundle --debug
-      - find . -name "Podfile" -execdir pod install \;
-      - flutter build ios --debug --no-codesign
+      - name: set up debug keystore
+        scripts: |
+          # set up debug keystore
+          rm -f ~/.android/debug.keystore
+          keytool -genkeypair \
+            -alias androiddebugkey \
+            -keypass android \
+            -keystore ~/.android/debug.keystore \
+            -storepass android \
+            -dname 'CN=Android Debug,O=Android,C=US' \
+            -keyalg 'RSA' \
+            -keysize 2048 \
+            -validity 10000
+      - name: Set up local.properties
+        scripts: |
+          echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
+      - name: Get flutter packages
+        scripts: |
+          flutter packages pub get
+      - name: Analyze project
+        scripts: |
+          cd . && flutter analyze
+      - name: Flutter unit test
+        scripts: |
+          flutter test
+      - name: Android build
+        scripts: |
+          flutter build appbundle --debug
+      # - name: iOS install deps
+      #   scripts: |
+      #     find . -name "Podfile" -execdir pod install \;
+      # - name: iOS builds
+      #   scripts: |
+      #     flutter build ios --debug --no-codesign
     artifacts:
       - build/**/outputs/apk/**/*.apk
       - build/**/outputs/bundle/**/*.aab
