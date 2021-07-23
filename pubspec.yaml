@@ -31,6 +31,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   lints: ^1.0.1
+  flutter_native_splash: ^1.1.8+4
 
 flutter:
   uses-material-design: true
@@ -47,8 +48,11 @@ flutter_icons:
   image_path_android: "lib/assets/app_icons/snappy_icon_512.png"
   adaptive_icon_foreground: "lib/assets/app_icons/snappy_icon_512.png"
   adaptive_icon_background: "lib/assets/app_icons/snappy_icon_512.png"
-  
 
+flutter_native_splash:
+  color: 'd8f2de'
+  image: 'lib/assets/app_icons/snappy_icon_512.png'
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
