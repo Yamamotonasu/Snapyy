@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:image_picker/image_picker.dart';
 
 
 import 'package:snappy/utils/localization.dart';
@@ -48,7 +49,6 @@ class SelectHowTo extends HookWidget {
   Widget build(BuildContext context) {
     final viewModel = useProvider(selectHowToViewModelProvider.notifier);
     final provider = useProvider(selectHowToViewModelProvider);
-    print(provider);
     return Container(
       color: Color(0xFFD8F2DE),
       child: Center(
@@ -57,13 +57,22 @@ class SelectHowTo extends HookWidget {
           children: <Widget>[
             Text(provider.isLoading.toString()),
             ElevatedButton(
-              child: const Text('Button'),
+              child: const Text('Select Library Button'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.orange,
                 onPrimary: Colors.white,
               ),
-              onPressed: () => viewModel.setIsLoading(),
-            ),          
+              onPressed: () => viewModel.selectLibrary(ImageSource.gallery),
+            ),
+            ElevatedButton(
+              child: const Text('Select Camera Button'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orange,
+                onPrimary: Colors.white,
+              ),
+              onPressed: () => viewModel.selectLibrary(ImageSource.camera),
+            ),
+                    
           ]
         )
       )
