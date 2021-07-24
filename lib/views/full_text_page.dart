@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:snappy/widgets/copy_button.dart';
+import 'package:snappy/widgets/empty_text_view.dart';
 
 class FullTextPage extends StatelessWidget {
 
   final String displayText = 'これをコピーしてください。\nこれをコピーしてください。\nこれをコピーしてください';
 
+  // For test
+  final bool isEmpty = true;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).colorScheme.background,
-      child: Column(
+      child: isEmpty ? EmptyTextView() : Column(
         children: <Widget>[
           Expanded(
             flex: 4,

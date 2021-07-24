@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snappy/widgets/empty_text_view.dart';
 import 'package:snappy/widgets/one_line_text_cell.dart';
 
 final List<String> data = [
@@ -22,12 +23,17 @@ final List<Widget> cell = data.map((e) => OneLineTextCell(displayText: e)).toLis
 
 class OneLinePage extends StatelessWidget {
 
+  // For test
+  final bool isEmpty = true;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).colorScheme.background,
-      child: ListView(
-        children: cell,
+      child: Expanded(
+        child: isEmpty ? EmptyTextView() : ListView(
+          children: cell,
+        )
       )
     );
   }
