@@ -20,8 +20,8 @@ class Themes {
       primaryColor: const Color(0xFF030303),
       appBarTheme: AppBarTheme(
         textTheme: _textTheme.apply(bodyColor: colorScheme.onPrimary),
-        color: colorScheme.background,
-        elevation: 0,
+        color: colorScheme.primary,
+        elevation: 5,
         iconTheme: IconThemeData(color: colorScheme.primary),
         brightness: colorScheme.brightness,
       ),
@@ -76,7 +76,8 @@ class Themes {
   static const _bold = FontWeight.w700;
 
   static final TextTheme _textTheme = TextTheme(
-    headline4: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 20.0), // unuse
+    headline1: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 18.0, color: Colors.white),
+    headline4: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 15.0, color: Colors.white),
     caption: GoogleFonts.notoSans(fontWeight: _semiBold, fontSize: 16.0), // unuse
     headline5: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse
     subtitle1: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse

@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:snappy/themes/theme.dart';
 
 import 'package:snappy/utils/localization.dart';
+import 'package:snappy/views/result_tab.dart';
 import 'package:snappy/views/select_how_to.dart';
 
 void main() {
@@ -32,6 +33,9 @@ class Snappy extends StatelessWidget {
             return supportedLocale;
           }
         }
+      },
+      routes: <String, WidgetBuilder> {
+        '/results': (_) => ResultTab()
       },
       theme: Themes.lightThemeData,
       darkTheme: Themes.darkThemeData,
