@@ -43,7 +43,7 @@ class Themes {
     primaryVariant: Color(0xFFFFFFFF),
     secondary: Color(0xFF26CE9A),
     secondaryVariant: Color(0xFFFAFBFB),
-    background: Color(0xFFD82E),
+    background: Color(0xFFD8F2DE),
     surface: Color(0xFFFAFBFB),
     onBackground: Colors.white,
     error: _lightFillColor,
@@ -76,15 +76,15 @@ class Themes {
   static const _bold = FontWeight.w700;
 
   static final TextTheme _textTheme = TextTheme(
-    headline4: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 20.0),
-    caption: GoogleFonts.notoSans(fontWeight: _semiBold, fontSize: 16.0),
-    headline5: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0),
-    subtitle1: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0),
-    overline: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 12.0),
-    bodyText1: GoogleFonts.notoSans(fontWeight: _regular, fontSize: 14.0),
-    subtitle2: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 14.0),
-    bodyText2: GoogleFonts.notoSans(fontWeight: _regular, fontSize: 16.0),
-    headline6: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 16.0),
-    button: GoogleFonts.notoSans(fontWeight: _semiBold, fontSize: 14.0),
+    headline4: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 20.0), // unuse
+    caption: GoogleFonts.notoSans(fontWeight: _semiBold, fontSize: 16.0), // unuse
+    headline5: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse
+    subtitle1: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse
+    overline: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 12.0), // unuse
+    bodyText1: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 16.0, color: Color(0xFF030303)),
+    subtitle2: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 14.0), // unuse
+    bodyText2: GoogleFonts.notoSans(fontWeight: _regular, fontSize: 16.0), // unuse
+    headline6: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 16.0), // unuse
+    button: GoogleFonts.notoSans(fontWeight: _semiBold, fontSize: 14.0), // unuse
   );
 }
