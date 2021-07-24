@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:snappy/utils/localization.dart';
+import 'package:snappy/utils/routes.dart';
 import 'package:snappy/view_models/select_how_to_view_model.dart';
 import 'package:snappy/widgets/select_button.dart';
 
@@ -47,7 +48,7 @@ class SelectHowTo extends HookWidget {
                         assetPath: 'lib/assets/library_icon.png',
                         displayText: AppLocalizations.instance.text('from_library'),
                         // onTap: () => viewModel.selectLibrary(ImageSource.gallery)
-                        onTap: () => Navigator.of(context).pushNamed('/results'),
+                        onTap: () => Navigator.of(context).pushNamed(Routes.resultTab.routeName),
                       ),
                     ],
                   )
