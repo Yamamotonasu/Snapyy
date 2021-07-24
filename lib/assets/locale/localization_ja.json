@@ -4,5 +4,7 @@
   "from_camera": "撮影した写真から",
   "from_library": "ライブラリから",
   "one_line_text": "1行ずつ",
-  "full_text": "全文"
+  "full_text": "全文",
+  "confirm": "確認",
+  "copyed": "をコピーしました。"
 }
