@@ -6,5 +6,6 @@
   "one_line_text": "1行ずつ",
   "full_text": "全文",
   "confirm": "確認",
-  "copyed": "をコピーしました。"
+  "copyed": "をコピーしました。",
+  "text_not_found": "テキストを見つける事が出来ませんでした\n再度選択してください"
 }

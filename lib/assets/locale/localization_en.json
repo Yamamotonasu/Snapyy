@@ -6,5 +6,6 @@
   "one_line_text": "One Lines",
   "full_text": "Full Text",
   "confirm": "Confirm",
-  "copyed": "copyed!"
+  "copyed": "copyed!",
+  "text_not_found": "Could not find the text.\n Please select again."
 }
