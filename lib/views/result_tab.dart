@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snappy/utils/localization.dart';
-import 'package:snappy/views/full_text.dart';
+import 'package:snappy/views/full_text_page.dart';
 import 'package:snappy/views/one_line_page.dart';
 
 class TabInfo {
