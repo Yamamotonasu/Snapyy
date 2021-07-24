@@ -1,3 +1,6 @@
 {
-  "title": "Localization Demo"
+  "title": "Localization Demo",
+  "where_select_photo": "Where do you create a copy list from ?",
+  "from_camera": "From Camera",
+  "from_library": "From Library"
 }

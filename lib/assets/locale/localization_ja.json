@@ -1,3 +1,6 @@
 {
-  "title": "ローカライズデモ"
+  "title": "ローカライズデモ",
+  "where_select_photo": "どこからコピーリストを作成しますか？",
+  "from_camera": "撮影した写真から",
+  "from_library": "ライブラリから"
 }
