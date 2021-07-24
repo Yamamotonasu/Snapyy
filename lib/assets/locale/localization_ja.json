@@ -2,5 +2,7 @@
   "title": "ローカライズデモ",
   "where_select_photo": "どこからコピーリストを作成しますか？",
   "from_camera": "撮影した写真から",
-  "from_library": "ライブラリから"
+  "from_library": "ライブラリから",
+  "one_line_text": "1行ずつ",
+  "full_text": "全文"
 }

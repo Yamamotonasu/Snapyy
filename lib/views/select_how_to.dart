@@ -40,13 +40,14 @@ class SelectHowTo extends HookWidget {
                     children: [
                       SelectButton(
                         assetPath: 'lib/assets/camera_icon.png',
-                        displayText: AppLocalizations.instance.text('from_camera'), 
+                        displayText: AppLocalizations.instance.text('from_camera'),
                         onTap: () => viewModel.selectLibrary(ImageSource.camera)
                       ),
                       SelectButton(
                         assetPath: 'lib/assets/library_icon.png',
                         displayText: AppLocalizations.instance.text('from_library'),
-                        onTap: () => viewModel.selectLibrary(ImageSource.gallery)
+                        // onTap: () => viewModel.selectLibrary(ImageSource.gallery)
+                        onTap: () => Navigator.of(context).pushNamed('/results'),
                       ),
                     ],
                   )

@@ -1,6 +1,8 @@
 {
-  "title": "Localization Demo",
+  "title": "snappy",
   "where_select_photo": "Where do you create a copy list from ?",
   "from_camera": "From Camera",
-  "from_library": "From Library"
+  "from_library": "From Library",
+  "one_line_text": "One Lines",
+  "full_text": "Full Text"
 }
