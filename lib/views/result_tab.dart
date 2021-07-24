@@ -28,8 +28,10 @@ class ResultTab extends StatelessWidget {
             child: TabBar(
               isScrollable: true,
               enableFeedback: true,
-              labelStyle: Theme.of(context).textTheme.headline4,
+              indicatorColor: Colors.white,
+              indicatorWeight: 2.0,
               labelPadding: EdgeInsets.symmetric(horizontal: 70.0),
+              labelStyle: Theme.of(context).textTheme.headline4,
               tabs: _tabs.map((tab) {
                 return Tab(text: tab.label);
               }).toList(),

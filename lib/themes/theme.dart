@@ -76,7 +76,7 @@ class Themes {
   static const _bold = FontWeight.w700;
 
   static final TextTheme _textTheme = TextTheme(
-    headline1: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 17.0, color: Colors.white),
+    headline1: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 18.0, color: Colors.white),
     headline4: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 15.0, color: Colors.white),
     caption: GoogleFonts.notoSans(fontWeight: _semiBold, fontSize: 16.0), // unuse
     headline5: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse
