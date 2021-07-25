@@ -13,6 +13,8 @@ class TabInfo {
 
 class ResultTab extends HookWidget {
 
+  static const routeName = '/results';
+
   final List<TabInfo> _tabs = [
     TabInfo(label: AppLocalizations.instance.text('one_line_text'), container: OneLinePage()),
     TabInfo(label: AppLocalizations.instance.text('full_text'), container: FullTextPage())

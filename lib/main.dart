@@ -6,6 +6,7 @@ import 'package:snappy/themes/theme.dart';
 import 'package:snappy/utils/localization.dart';
 import 'package:snappy/views/result_tab.dart';
 import 'package:snappy/views/select_how_to.dart';
+import 'package:snappy/views/translation_page.dart';
 
 void main() {
   runApp(ProviderScope(child: Snappy()));
@@ -34,8 +35,14 @@ class Snappy extends StatelessWidget {
           }
         }
       },
-      routes: <String, WidgetBuilder> {
-        '/results': (_) => ResultTab()
+      onGenerateRoute: (settings) {
+        switch(settings.name) {
+          case ResultTab.routeName:
+            return MaterialPageRoute<void>(builder: (context) => ResultTab());
+          case TranslationPage.routeName:
+            print('translation!');
+            return MaterialPageRoute<void>(builder: (context) => TranslationPage(translationText: settings.arguments as String));
+        }
       },
       theme: Themes.lightThemeData,
       darkTheme: Themes.darkThemeData,

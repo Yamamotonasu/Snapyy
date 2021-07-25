@@ -7,5 +7,8 @@
   "full_text": "Full Text",
   "confirm": "Confirm",
   "copyed": "copyed!",
-  "text_not_found": "Could not find the english text.\n Please select again."
+  "text_not_found": "Could not find the english text.\n Please select again.",
+  "translation": "translations",
+  "detected_text": "Detected text",
+  "translation_from_japanese": "Translated text(Japanese)"
 }
