@@ -3,8 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:snappy/utils/localization.dart';
-import 'package:snappy/utils/routes.dart';
 import 'package:snappy/view_models/select_how_to_view_model.dart';
+import 'package:snappy/views/result_tab.dart';
 import 'package:snappy/widgets/select_button.dart';
 
 class SelectHowTo extends HookWidget {
@@ -12,7 +12,7 @@ class SelectHowTo extends HookWidget {
   Future<void> _slectLibrary(BuildContext context, SelectHowToViewModel viewModel) async {
     final results = await viewModel.selectLibrary(ImageSource.gallery);
     if (results) {
-      Navigator.of(context).pushNamed(Routes.resultTab.routeName);
+      Navigator.of(context).pushNamed(ResultTab.routeName);
     } else {
       print('error!');
     }
