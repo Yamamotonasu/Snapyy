@@ -9,6 +9,15 @@ import 'package:snappy/widgets/select_button.dart';
 
 class SelectHowTo extends HookWidget {
 
+  Future<void> _slectLibrary(BuildContext context, SelectHowToViewModel viewModel) async {
+    final results = await viewModel.selectLibrary(ImageSource.gallery);
+    if (results) {
+      Navigator.of(context).pushNamed(Routes.resultTab.routeName);
+    } else {
+      print('error!');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final viewModel = useProvider(selectHowToViewModelProvider.notifier);
@@ -47,8 +56,7 @@ class SelectHowTo extends HookWidget {
                       SelectButton(
                         assetPath: 'lib/assets/library_icon.png',
                         displayText: AppLocalizations.instance.text('from_library'),
-                        // onTap: () => viewModel.selectLibrary(ImageSource.gallery)
-                        onTap: () => Navigator.of(context).pushNamed(Routes.resultTab.routeName),
+                        onTap: () => _slectLibrary(context, viewModel)
                       ),
                     ],
                   )

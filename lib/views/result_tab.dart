@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:snappy/utils/localization.dart';
 import 'package:snappy/views/full_text_page.dart';
 import 'package:snappy/views/one_line_page.dart';
@@ -10,7 +11,7 @@ class TabInfo {
   TabInfo({required this.label, required this.container});
 }
 
-class ResultTab extends StatelessWidget {
+class ResultTab extends HookWidget {
 
   final List<TabInfo> _tabs = [
     TabInfo(label: AppLocalizations.instance.text('one_line_text'), container: OneLinePage()),

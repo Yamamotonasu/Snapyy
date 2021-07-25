@@ -1,5 +1,7 @@
 class SelectHowToState {
-  int isLoading;
+  bool isLoading;
+  List<String> detectedTexts;
+  bool hasEnglishText;
   String? selectedImagePath;
-  SelectHowToState({required this.isLoading});
+  SelectHowToState({required this.isLoading, required this.detectedTexts, required this.hasEnglishText});
 }
