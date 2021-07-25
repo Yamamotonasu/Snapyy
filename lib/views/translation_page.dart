@@ -21,13 +21,15 @@ class TranslationPage extends HookWidget {
     useEffect(() {
       provider.execTranslate(translationText);
     }, const []);
+
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text(AppLocalizations.instance.text('translation'), style: Theme.of(context).textTheme.headline4),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Theme.of(context).colorScheme.background,
           child: Column(
             children: <Widget>[
               SizedBox(height: 20),

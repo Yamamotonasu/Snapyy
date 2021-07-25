@@ -27,6 +27,7 @@ class ResultTab extends HookWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.instance.text('title'), style: Theme.of(context).textTheme.headline1),
+          iconTheme: IconThemeData(color: Colors.white),
           bottom: PreferredSize(
             child: TabBar(
               isScrollable: true,
