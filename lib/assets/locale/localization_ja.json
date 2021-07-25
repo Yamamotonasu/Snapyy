@@ -10,5 +10,6 @@
   "text_not_found": "英語のテキストを見つける事が出来ませんでした\n再度写真を選択してください",
   "translation": "翻訳する",
   "detected_text": "検出した文字",
-  "translation_from_japanese": "日本語で翻訳"
+  "translation_from_japanese": "日本語で翻訳",
+  "failed_translate": "翻訳に失敗しました。再度お試しください。"
 }
