@@ -1,21 +1,16 @@
 # snappy
 
-A new Flutter project.
+![snappy_icon](https://user-images.githubusercontent.com/46254873/127070602-f423cbd3-425a-4615-bce8-3c2aea341f1f.png)
+
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- flutter pub get
+- flutter run
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Overview
-- Flutter doctor -v
-Please validate environment yourself.
-
+## Environments
+- Flutter 2.2.2
+- Xcode 12.5
+- AndroidSDK 30.0.3
+- AndroidStudio 4.2

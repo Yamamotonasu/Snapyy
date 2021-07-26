@@ -40,7 +40,6 @@ class Snappy extends StatelessWidget {
           case ResultTab.routeName:
             return MaterialPageRoute<void>(builder: (context) => ResultTab());
           case TranslationPage.routeName:
-            print('translation!');
             return MaterialPageRoute<void>(builder: (context) => TranslationPage(translationText: settings.arguments as String));
         }
       },

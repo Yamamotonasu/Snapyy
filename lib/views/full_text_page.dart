@@ -16,10 +16,10 @@ class FullTextPage extends HookWidget {
       color: Theme.of(context).colorScheme.background,
       child: !state.hasEnglishText ? EmptyTextView() : Column(
         children: <Widget>[
-          GestureDetector(
-            onTap: () => Feedback.wrapForTap(() => Navigator.of(context).pushNamed(TranslationPage.routeName, arguments: displayText), context),
-            child: Expanded(
-              flex: 4,
+          Expanded(
+            flex: 4,
+            child: GestureDetector(
+              onTap: () => Feedback.wrapForTap(() => Navigator.of(context).pushNamed(TranslationPage.routeName, arguments: displayText), context),
               child: Container(
                 margin: EdgeInsets.only(top: 30),
                 padding: EdgeInsets.all(20),
@@ -34,9 +34,10 @@ class FullTextPage extends HookWidget {
                   style: Theme.of(context).textTheme.bodyText1
                 )
               )
-            )
+            ),
           ),
           Expanded(
+            flex: 1,
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
