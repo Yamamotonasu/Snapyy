@@ -11,33 +11,38 @@ class OneLineTextCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      child: Row(
+      child: Column(
         children: <Widget>[
-          Expanded(
-            flex: 4,
-            child: GestureDetector(
-              onTap: Feedback.wrapForTap(() => Navigator.of(context).pushNamed(TranslationPage.routeName, arguments: displayText), context),
-              child: Container(
-                margin: EdgeInsets.only(left: 15),
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Theme.of(context).colorScheme.primary),
-                  borderRadius: BorderRadius.circular(25),
+          const SizedBox(height: 9),
+          Row(
+            children: <Widget>[
+              Expanded(
+                flex: 4,
+                child: GestureDetector(
+                  onTap: Feedback.wrapForTap(() => Navigator.of(context).pushNamed(TranslationPage.routeName, arguments: displayText), context),
+                  child: Container(
+                    margin: EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Theme.of(context).colorScheme.primary),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Center(
+                      child: Text(displayText, style: Theme.of(context).textTheme.bodyText1),
+                    )
+                  ),
                 ),
-                child: Center(
-                  child: Text(displayText, style: Theme.of(context).textTheme.bodyText1),
-                )
               ),
-            ),
+              Expanded(
+                flex: 1,
+                child: CopyButton(copyText: displayText),
+              ),
+            ]
           ),
-          Expanded(
-            flex: 1,
-            child: CopyButton(copyText: displayText),
-          )
-        ]
-      ),
+          const SizedBox(height: 9)
+        ],
+      )
     );
   }
 
