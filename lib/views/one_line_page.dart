@@ -13,10 +13,8 @@ class OneLinePage extends HookWidget {
     final List<Widget> cell = state.detectedTexts.map((e) => OneLineTextCell(displayText: e)).toList();
     return Container(
       color: Theme.of(context).colorScheme.background,
-      child: Expanded(
-        child: !state.hasEnglishText ? EmptyTextView() : ListView(
-          children: cell,
-        )
+      child: !state.hasEnglishText ? EmptyTextView() : ListView(
+        children: cell,
       )
     );
   }

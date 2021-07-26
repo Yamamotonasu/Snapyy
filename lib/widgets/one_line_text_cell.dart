@@ -20,7 +20,7 @@ class OneLineTextCell extends StatelessWidget {
               onTap: Feedback.wrapForTap(() => Navigator.of(context).pushNamed(TranslationPage.routeName, arguments: displayText), context),
               child: Container(
                 margin: EdgeInsets.only(left: 15),
-                height: 75,
+                padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Theme.of(context).colorScheme.primary),
