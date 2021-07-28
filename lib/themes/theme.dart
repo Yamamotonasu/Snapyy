@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Themes {
+
+  final BuildContext buildContext;
+
+  Themes({required this.buildContext});
+  
   static const _lightFillColor = Colors.black;
   static const _darkFillColor = Colors.white;
 
@@ -39,28 +44,28 @@ class Themes {
   } 
 
   static const ColorScheme lightColorScheme = ColorScheme(
-    primary: Color(0xFF26CE9A),
-    primaryVariant: Color(0xFFFFFFFF),
-    secondary: Color(0xFF26CE9A),
-    secondaryVariant: Color(0xFFFAFBFB),
+    primary: Color(0xFF26CE9A), // App theme color
+    primaryVariant: Color(0xFF030303),
+    secondary: Color(0xFF26CE9A), // App bar theme
+    secondaryVariant: Color(0xFFFFFF),
     background: Color(0xFFD8F2DE),
-    surface: Color(0xFFFAFBFB),
-    onBackground: Colors.white,
+    surface: Color(0xFFFFFFFF), // Cell card
+    onBackground: Color(0xFFFFFFF),
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,
-    onSecondary: Color(0xFF322942),
-    onSurface: Color(0xFF241E30),
+    onSecondary: Color(0xFFFFFFF),
+    onSurface: Color(0xFFFFFFF),
     brightness: Brightness.light,
   );
 
   static const ColorScheme darkColorScheme = ColorScheme(
-    primary: Color(0xFFFF8383),
-    primaryVariant: Color(0xFF1CDEC9),
-    secondary: Color(0xFF4D1F7C),
+    primary: Color(0xFF26CE9A), // App theme color
+    primaryVariant: Color(0xFFFFFFFF),
+    secondary: Color(0xFF030303),
     secondaryVariant: Color(0xFF451B6F),
-    background: Color(0xFF241E30),
-    surface: Color(0xFF1F1929),
+    background: Color(0xFF030303),
+    surface: Color(0xFF393939), // Cell card
     onBackground: Color(0x0DFFFFFF), // White with 0.05 opacity
     error: _darkFillColor,
     onError: _darkFillColor,
@@ -82,7 +87,7 @@ class Themes {
     headline5: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse
     subtitle1: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 16.0), // unuse
     overline: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 12.0), // unuse
-    bodyText1: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 16.0, color: Color(0xFF030303)),
+    bodyText1: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 16.0),
     subtitle2: GoogleFonts.notoSans(fontWeight: _medium, fontSize: 14.0), // unuse
     bodyText2: GoogleFonts.notoSans(fontWeight: _regular, fontSize: 16.0), // unuse
     headline6: GoogleFonts.notoSans(fontWeight: _bold, fontSize: 16.0), // unuse

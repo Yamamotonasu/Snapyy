@@ -26,6 +26,7 @@ class ResultTab extends HookWidget {
       length: _tabs.length,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.secondary,
           title: Text(AppLocalizations.instance.text('title'), style: Theme.of(context).textTheme.headline1),
           iconTheme: IconThemeData(color: Colors.white),
           bottom: PreferredSize(

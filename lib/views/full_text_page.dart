@@ -25,7 +25,7 @@ class FullTextPage extends HookWidget {
                 padding: EdgeInsets.all(20),
                 width: MediaQuery.of(context).size.width * 0.80,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.surface,
                   border: Border.all(color: Theme.of(context).colorScheme.primary),
                   borderRadius: BorderRadius.circular(30),
                 ),

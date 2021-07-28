@@ -24,18 +24,21 @@ class SelectHowTo extends HookWidget {
           width: MediaQuery.of(context).size.width * 0.8,
           height: 200,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.surface,
             border: Border.all(color: Theme.of(context).colorScheme.primary),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                AppLocalizations.instance.text('where_select_photo'),
-                style: Theme.of(context).textTheme.bodyText1,
-                textAlign: TextAlign.center,
-                maxLines: 1,
+              FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Text(
+                  AppLocalizations.instance.text('where_select_photo'),
+                  style: Theme.of(context).textTheme.bodyText1?.merge(TextStyle(color: Theme.of(context).colorScheme.primaryVariant)),
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                ),
               ),
               Center(
                 child: Row(

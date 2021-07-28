@@ -27,6 +27,7 @@ class TranslationPage extends HookWidget {
       appBar: AppBar(
         title: Text(AppLocalizations.instance.text('translation'), style: Theme.of(context).textTheme.headline4),
         iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Theme.of(context).colorScheme.secondary,
       ),
       body: SingleChildScrollView(
         child: Container(
