@@ -27,7 +27,7 @@ class TranslationCell extends StatelessWidget {
                   margin: EdgeInsets.only(left: 20),
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.surface,
                     border: Border.all(color: Theme.of(context).colorScheme.primary),
                     borderRadius: BorderRadius.circular(30),
                   ),
