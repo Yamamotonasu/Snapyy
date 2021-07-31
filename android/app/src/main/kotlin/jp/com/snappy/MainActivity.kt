@@ -1,4 +1,4 @@
-package jp.com.snappy.snappy
+package jp.com.snappy
 
 import io.flutter.embedding.android.FlutterActivity
 
