@@ -31,6 +31,7 @@ dependencies:
   google_fonts: any
   image_picker: 0.7.4
   dio: ^4.0.0
+  shared_preferences: any
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:snappy/themes/theme.dart';
 
 import 'package:snappy/utils/localization.dart';
+import 'package:snappy/utils/snappy_share_preference.dart';
 import 'package:snappy/views/result_tab.dart';
 import 'package:snappy/views/select_how_to.dart';
 import 'package:snappy/views/translation_page.dart';
@@ -15,6 +16,7 @@ void main() {
 class Snappy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SnappySharePreference().setValue();
     return MaterialApp(
       title: 'Snappy',
       localizationsDelegates: [
